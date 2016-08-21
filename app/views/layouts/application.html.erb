@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VenueShark</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+<nav class="navbar">
+	<div class="logo">
+		<%= image_tag src="shark.png" %>
+		<div class="links-container">
+			
+		</div>
+	</div>
+</nav>
+
+
+<div class="container-fluid">
+  <body>
+    <%= yield %>
+  </body>
+</div>
+</html>

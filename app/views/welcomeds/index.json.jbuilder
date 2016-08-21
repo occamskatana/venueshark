@@ -1,0 +1,1 @@
+json.array! @welcomeds, partial: 'welcomeds/welcomed', as: :welcomed
