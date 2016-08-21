@@ -1,35 +1,31 @@
+<body class="landing">
+    <div class="hero-content"> <!--     hero content -->
+        <h1 class="hero-title">Venue Shark</h1>
+        <p class="hero-tagline">Listen like the locals</p>
+        <% if current_user %>
+          <%= button_to "Get Started Now", '#', class: 'btn btn-success rawr' %>
 
-<div class="jumbotron welcome-nick">
-  <h1 align="center">Venue Shark</h1>
-  <p align="center">Listen like the locals</p>
-</div>
+        <% else %>
 
-  <table>
-    <thead>
-      <tr>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      
-    </tbody>
-  </table>
-
-<div class="container">
-  <div class="row-fluid">
-    <div class='col-md-4 points'>
-      <h4 align="center">Find local bands, fuckboy</h4>
+          <%= button_to "Sign Up!", '#', class: 'btn btn-success rawr' %>
+        <% end %>
     </div>
-
-    <div class='col-md-4 points'>
-      <h4 align="center">Fuck you nigger</h4>
+        
+    <div class="selling-points container clearfix"> <!-- selling points -->
+        <div class="point column third">
+            <span class="ion-music-note"></span>
+            <h5 class="point-title">Choose your music</h5>
+            <p class="point-description">The world is full of music; why should you have to listen to music that someone else chooses?</p>
+        </div>
+        <div class="point column third">    
+            <span class="ion-radio-waves"></span>
+            <h5 class="point-title">Earn points by going to shows</h5>
+            <p class="point-description">Rage out and take huge extasy pills!</p>
+        </div>
+        <div class="point column third">
+            <span class="ion-iphone"></span>
+            <h5 class="point-title">Mobile enabled</h5>
+            <p class="point-description">Listen to your music on the go. This streaming service is available on all devices.</p>
+        </div>
     </div>
-
-    <div class='col-md-4 points'>
-      <h4 align='center'>Rawr</h4>
-    </div>
-  </div>
-
-
-
+</body>
