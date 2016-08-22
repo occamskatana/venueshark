@@ -13,18 +13,19 @@
   </head>
 
 
-<nav class="navbar"> 
-   <a href=<%= url_for(root_path) %>>
-        <%= image_tag 'shark.png' %>
-   <a>
-    <div class="links-container">
-        <%= link_to "Sign In", new_user_session_path, class: "navbar-link" %>
-        <%= link_to "Sign Up", root_path, class: "navbar-link" %>
-    </div>
-</nav>
 
 
-  <body class="landing">
-    <%= yield %>
-  </body>
+
+<body class="landing">
+  <nav class="navbar"> 
+	   <a href=<%= url_for(root_path) %>>
+	        <%= image_tag 'shark.png' %>
+	   <a>
+	    <div class="links-container">
+	        <%= link_to "Sign In", new_user_session_path, class: "navbar-link" %>
+	        <%= link_to "Sign Up", root_path, class: "navbar-link" %>
+	    </div>
+	</nav>
+  <%= yield %>
+</body>
 </html>

@@ -1,31 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid main-container">
 
-<h1>Venues</h1>
+  <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Rating</th>
-      <th>Address</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @venues.each do |venue| %>
-      <tr>
-        <td><%= venue.name %></td>
-        <td><%= venue.rating %></td>
-        <td><%= venue.address %></td>
-        <td><%= link_to 'Show', venue %></td>
-        <td><%= link_to 'Edit', edit_venue_path(venue) %></td>
-        <td><%= link_to 'Destroy', venue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  <div class="venues-container row">
+    <h1 align="center" class="index-title">Venues</h1>
+
+    <%= link_to "Add Venue", new_venue_path, class: 'btn add-button' %>
+  
+    <% @venues.each do  |venue| %>
+      <h1> <%= venue.name %></h1>
+      <p> <%= venue.rating %> </p>
+      <p> <%= venue.address %> </p>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Venue', new_venue_path %>
+    <br>
+  </div>
+    <%= link_to 'New Venue', new_venue_path %>
+</div>
