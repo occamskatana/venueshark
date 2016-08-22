@@ -3,11 +3,11 @@
         <h1 class="hero-title">Venue Shark</h1>
         <p class="hero-tagline">Listen like the locals</p>
         <% if current_user %>
-          <%= button_to "Get Started Now", '#', class: 'btn btn-success rawr' %>
+          <%= link_to "Get started #{current_user.email}", venues_path , class: 'btn btn-success rawr' %>
 
         <% else %>
 
-          <%= button_to "Sign Up!", '#', class: 'btn btn-success rawr' %>
+          <%= link_to "Sign Up!", new_user_registration_path, class: 'btn btn-success rawr' %>
         <% end %>
     </div>
         
@@ -15,7 +15,7 @@
         <div class="point column third">
             <span class="ion-music-note"></span>
             <h5 class="point-title">Choose your music</h5>
-            <p class="point-description">The world is full of music; why should you have to listen to music that someone else chooses?</p>
+            <p class="point-description">The world is full of music; why listen to shit music?</p>
         </div>
         <div class="point column third">    
             <span class="ion-radio-waves"></span>

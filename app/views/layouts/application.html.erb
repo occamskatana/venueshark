@@ -13,12 +13,12 @@
   </head>
 
 
-<nav class="navbar"> <!-- nav bar -->
-    <a href="index.html">
+<nav class="navbar"> 
+   <a href=<%= url_for(root_path) %>>
         <%= image_tag 'shark.png' %>
-    </a>
+   <a>
     <div class="links-container">
-        <a href="collection.html" class="navbar-link">Log In</a>
+        <%= link_to "Sign In", new_user_session_path, class: "navbar-link" %>
         <%= link_to "Sign Up", root_path, class: "navbar-link" %>
     </div>
 </nav>
