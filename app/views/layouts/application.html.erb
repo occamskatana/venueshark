@@ -16,16 +16,20 @@
 
 
 
-<body class="landing">
-  <nav class="navbar"> 
-	   <a href=<%= url_for(root_path) %>>
-	        <%= image_tag 'shark.png' %>
-	   <a>
-	    <div class="links-container">
-	        <%= link_to "Sign In", new_user_session_path, class: "navbar-link" %>
-	        <%= link_to "Sign Up", root_path, class: "navbar-link" %>
-	    </div>
-	</nav>
-  <%= yield %>
-</body>
+	<body class="landing">
+	  <nav class="navbar"> 
+		   <a href= <%= url_for(root_path)%> class="navbar-logo">
+		        <%= image_tag 'shark.png' %>
+		   <a>
+		    <div class="links-container">
+		    	<% if current_user %>
+						<p class="navbar-link"> Welcome Back, <%= current_user.email %> </p>
+		    	<% else %>
+		        <%= link_to "Sign In", new_user_session_path, class: "navbar-link" %>
+		        <%= link_to "Sign Up", root_path, class: "navbar-link" %>
+		      <% end %>
+		    </div>
+		</nav>
+	  <%= yield %>
+	</body>
 </html>
